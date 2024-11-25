@@ -1,0 +1,449 @@
+@import "./base.css";
+section{
+    padding:100px 0;
+    background-color: black;
+}
+.category,
+.product{
+    width: calc((100% / 3) - 40px);
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    background-color: rgb(170, 170, 170);
+    color: #fff;
+}
+.product img{
+    width: 80%;
+    height: 80%;
+}
+.products h1{
+    color: rgb(204, 164, 113);
+    text-align: center;
+    padding-bottom: 60px;
+    font-weight: bold;
+    font-size: 30px;
+}
+@media screen and (max-width:968px) {
+
+    .category,
+    .product{
+        width: calc((100% / 2) - 40px);
+    }
+}
+@media screen and (max-width:528px) {
+
+    .category,
+    .product{
+        width: calc((100% / 1) - 40px);
+    }
+}
+
+
+
+
+.header{
+    background-color: black ;
+    padding: 15px 0;
+    box-shadow: 1px 4px 20px rgba(0, 0, 0, 0.4);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.header .logo{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+    font-size: 22px;
+}
+.header .logo a{
+    font-weight: 600;
+    color: var(--mainColor);
+}
+.header .navbar ul{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+    
+}
+.navbar ul li a{
+    color: #fff;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+.navbar ul li a:hover{
+    color: var(--mainColor);
+}
+.navbar ul .active{
+    font-weight: bold;
+    color: var(--mainColor);
+}
+.menu{
+    display: none;
+    color: #fff;
+}
+.header .auth{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.header .auth .login,.header .auth .register{
+    
+    padding: 10px 40px;
+    border: 1px solid var(--mainColor);
+    color: var(--mainColor);
+    border-radius: 10px;
+    text-align: center;
+    font-family: var(--subColor);
+    font-size: 18px;
+    font-weight: bold;
+}
+.header .auth .register{
+    background-color: var(--mainColor);
+    color: #fff;
+    padding: 10px 30px;
+}
+.nav-nav{
+    background-color: black;
+}
+/*responsive for header*/
+@media screen and (max-width:1150px) {
+
+    .header .navbar,
+    .header .auth{
+        display: none;
+    }
+    .menu{
+        display: block;
+        order: 1;
+    }
+}
+
+@media screen and (max-width:568px) {
+    .container{
+        width: calc(100% - 70px);
+        margin: auto;
+    }
+}
+
+.loader-container{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+.loader{
+    width: 50px;
+    height: 50px;
+    border: 5px solid gold;
+    border-bottom-color:transparent;
+    border-radius: 50%;
+    animation: rotation 1s linear infinite;
+}
+@keyframes rotation{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.active{
+    display: flex;
+}
+
+
+
+
+.section4{
+    background-image: url('./cover.jpg');
+    background-attachment: fixed; 
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    position: relative;
+}
+.section4 .banner{
+    width: 35%;
+    margin: auto;
+    text-align: center;
+    padding: 200px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    align-items: center;
+    
+}
+
+.section4 .banner .main-title h2{
+    font-size: 36px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-bottom: 7px solid var(--mainColor);
+    color: #fff;
+    width: fit-content;
+    min-width: 500px;
+}
+
+.section4 .banner a{
+    background-color: rgb(52, 52, 53);
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    width: 30%;
+    padding: 20px 0;
+    box-sizing: border-box;
+    min-width: 200px;
+}
+.section4 .banner a::before{
+    transition: all .5s;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: var(--mainColor);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+}
+.section4 .banner a:hover::before{
+    height: 100%;
+}
+.countDown-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    color: #fff;
+}
+.countDown-container .time{
+    background-color: var(--mainColor);
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 18px;
+}
+.countDown-container .time span:first-of-type{
+    font-size: 32px;
+    font-weight: bold;
+}
+@media screen and (max-width: 870px) {
+    .countDown-container .time{
+        width: 100px;
+        height: 100px;
+    }
+}
+@media screen and (max-width: 680px) {
+
+    .section4 .banner .main-title h2{
+        min-width: 100px;
+        font-size: 24px;
+    }
+}
+@media screen and (max-width: 600px){
+
+    .countDown-container{
+        gap: 10px;
+    }
+    .countDown-container .time{
+        width: 75px;
+        height: 75px;
+        font-size: 14px;
+        gap: 2px;
+    }
+    .countDown-container .time span:first-of-type{
+        font-size: 18px;
+        font-weight: bold;
+    }
+}
+
+
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    padding-bottom: 30px;
+}
+
+.pagination {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.page-item {
+    margin: 0 5px;
+}
+
+.page-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(52, 52, 53);
+    color: #fff;
+    position: relative;
+    width: 50px;
+    z-index: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    border: none;
+    cursor: pointer;
+}
+.page-link::before{
+    transition: all .5s;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: var(--mainColor);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.page-link:hover::before {
+    height: 100%;
+}
+
+.page-item.active .page-link::before {
+    height: 100%;
+}
+.page-item.disabled .page-link {
+    cursor: not-allowed;
+}
+
+
+
+
+.my-modal{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.my-modal .modal{
+    position: relative;
+    width: 800px;
+    height: 500px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.my-modal .img-modal{
+    width: 450px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 20px;
+}
+.my-modal img{
+    width: 400px;
+    height: 400px;
+}
+
+.my-modal .desc{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.my-modal .desc h2{
+    font-size: 32px;
+    color: var(--mainColor);
+}
+.my-modal .desc h4{
+    font-size: 22px;
+}
+.my-modal .desc p{
+
+}
+.my-modal .desc .stars i{
+    color: var(--mainColor);
+}
+.my-modal .desc span{
+    font-size: 27px;
+}
+.my-modal .desc span span{
+    font-size: 22px;
+    color: #fff;
+    background-color: red;
+}
+.my-modal .desc a{
+    background-color: rgb(52, 52, 53);
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    width: 30%;
+    padding: 20px 0;
+    box-sizing: border-box;
+    min-width: 200px;
+    text-align: center;
+}
+.my-modal .desc a::before{
+    transition: all .5s;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: var(--mainColor);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+}
+.my-modal .desc a:hover::before{
+    height: 100%;
+}
+.backBtn,
+.prevBtn,
+.nextBtn{
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    color: #000;
+    transition: all 0.4s ease;
+}
+.backBtn{
+    top: 10px;
+    right:10px;
+    cursor: pointer;
+    
+}
+.backBtn:hover,
+.prevBtn:hover,
+.nextBtn:hover{
+    transform: scale(1.2);
+}
+.prevBtn{
+    top: 50%;
+    left: 10px;
+}
+.nextBtn{
+    top: 50%;
+    right: 10px;
+}
+.d-none{
+    display: none;
+}

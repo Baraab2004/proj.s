@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="loader-container">
+        <div class="loader"></div>
+    </div>
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="logo">
+                    <a href="#">Baraa</a>
+                </div>
+                <div class="navbar">
+                    <ul>
+                        <li><a class="active" href="#">Home</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="menu">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="auth">
+                    <a href="#" class="login">Login</a>
+                    <a href="#" class="register">Register</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="categories">
+        <div class="container">
+            <div class="row" style="color: #fff;">
+                <a href="./category.html"></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section4">
+        <div class="banner">
+            <div class="main-title">
+                <h2>Most Wanted Of The Year</h2>
+            </div>
+            <div class="countDown-container">
+                <div class="time">
+                    <span id="days"></span>
+                    <span>Days</span>
+                </div>
+                <div class="time">
+                    <span id="hours"></span>
+                    <span>Hrs</span>
+                </div>
+                <div class="time">
+                    <span id="minutes"></span>
+                    <span>Mins</span>
+                </div>
+                <div class="time">
+                    <span id="seconds"></span>
+                    <span>Secs</span>
+                </div>
+            </div>
+            
+            <a href="">SHOP NOW</a>
+        </div>
+    </section>
+
+    <section class="products">
+        <h1>All Products in this shop</h1>
+        <div class="container">
+            
+            <div class="row">
+                
+            </div>
+        </div>
+    </section>
+
+    <div class="pagination-container">
+        <ul class="pagination">
+        </ul>
+    </div>
+
+    <div class="my-modal d-none">
+        <div class="modal">
+            <i class="fa-solid fa-xmark backBtn"></i>
+            <a href="javascript:void(0);" class="prevBtn">&#10094;</a>
+            <div class="img-modal">
+                <img src="" alt="">
+            </div>
+            <div class="desc">
+                <h2></h2>
+                <h4></h4>
+                <p></p>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <span class="rating">(4.3)</span>
+                </div>
+                <span class="price">$111</span>
+                <a href="">ADD TO CART</a>
+            </div>
+            <a href="javascript:void(0);" class="nextBtn">&#10095;</a>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
